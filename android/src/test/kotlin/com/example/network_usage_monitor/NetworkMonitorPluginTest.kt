@@ -1,4 +1,4 @@
-package com.example.network_monitor
+package com.example.network_usage_monitor
 
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel

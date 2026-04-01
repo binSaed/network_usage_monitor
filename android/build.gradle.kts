@@ -1,4 +1,4 @@
-group = "com.example.network_monitor"
+group = "com.example.network_usage_monitor"
 version = "1.0-SNAPSHOT"
 
 buildscript {
@@ -27,7 +27,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.network_monitor"
+    namespace = "com.example.network_usage_monitor"
 
     compileSdk = 36
 

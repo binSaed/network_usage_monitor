@@ -1,4 +1,4 @@
-# Network Monitor
+# Network Usage Monitor
 
 A Flutter plugin for monitoring and analyzing HTTP network traffic across Dart (`dio`, `http`) and native platform layers. Includes a built-in diagnostic UI to visualize, filter, and analyze network requests in real-time.
 
@@ -17,9 +17,9 @@ Add to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  network_monitor:
+  network_usage_monitor:
     git:
-      url: https://github.com/binSaed/network_monitor.git
+      url: https://github.com/binSaed/network_usage_monitor.git
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ dependencies:
 ### 1. Initialize the service
 
 ```dart
-import 'package:network_monitor/network_monitor.dart';
+import 'package:network_usage_monitor/network_usage_monitor.dart';
 
 await NetworkMonitorService.instance.init();
 ```
@@ -87,7 +87,7 @@ The monitor page provides:
 
 ```
 lib/
-├── network_monitor.dart              # Public API exports
+├── network_usage_monitor.dart         # Public API exports
 └── src/
     ├── network_monitor_service.dart   # Core service (singleton, record management)
     ├── network_request_record.dart    # Data model

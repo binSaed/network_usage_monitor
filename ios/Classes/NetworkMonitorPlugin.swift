@@ -158,7 +158,7 @@ public class NetworkMonitorPlugin: NSObject, FlutterPlugin {
         swizzleURLSessionConfiguration()
 
         let channel = FlutterMethodChannel(
-            name: "network_monitor",
+            name: "network_usage_monitor",
             binaryMessenger: registrar.messenger()
         )
         let instance = NetworkMonitorPlugin()

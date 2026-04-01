@@ -1,1 +1,1 @@
-rootProject.name = 'network_monitor'
+rootProject.name = 'network_usage_monitor'

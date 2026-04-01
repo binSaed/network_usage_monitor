@@ -1,4 +1,4 @@
-package com.example.network_monitor
+package com.example.network_usage_monitor
 
 import android.net.TrafficStats
 import android.os.Process
@@ -99,7 +99,7 @@ class NetworkMonitorPlugin : FlutterPlugin, MethodCallHandler {
         } catch (_: Exception) {
         }
 
-        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "network_monitor")
+        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "network_usage_monitor")
         channel.setMethodCallHandler(this)
     }
 

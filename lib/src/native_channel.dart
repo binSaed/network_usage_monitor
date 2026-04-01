@@ -1,7 +1,7 @@
 import 'package:flutter/services.dart';
 
 class NativeNetworkChannel {
-  static const _channel = MethodChannel('network_monitor');
+  static const _channel = MethodChannel('network_usage_monitor');
 
   static Future<List<Map<String, dynamic>>> getNativeRecords() async {
     try {
