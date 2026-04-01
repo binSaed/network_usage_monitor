@@ -169,7 +169,11 @@ class _NetworkRequestTileState extends State<NetworkRequestTile> {
       onTap: () {
         Clipboard.setData(ClipboardData(text: value));
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('URL copied'), duration: Duration(seconds: 1)),
+          SnackBar(
+            content: Text('URL copied', style: TextStyle(color: Theme.of(context).colorScheme.onInverseSurface)),
+            backgroundColor: Theme.of(context).colorScheme.inverseSurface,
+            duration: const Duration(seconds: 1),
+          ),
         );
       },
       child: Row(
