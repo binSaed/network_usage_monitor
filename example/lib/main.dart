@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:network_usage_monitor/network_usage_monitor.dart';
@@ -57,15 +58,22 @@ class _HomePageState extends State<HomePage> {
 
   Future<void> _makeDioRequest() async {
     try {
-      await _dio.get('https://jsonplaceholder.typicode.com/posts/1');
-    } catch (_) {}
+      final response =
+          await _dio.get('https://dummyjson.com/products/1');
+      debugPrint('Dio response: ${response.statusCode}');
+    } catch (e) {
+      debugPrint('Dio error: $e');
+    }
   }
 
   Future<void> _makeHttpRequest() async {
     try {
-      await _httpClient
-          .get(Uri.parse('https://jsonplaceholder.typicode.com/users/1'));
-    } catch (_) {}
+      final response = await _httpClient
+          .get(Uri.parse('https://dummyjson.com/users/1'));
+      debugPrint('HTTP response: ${response.statusCode}');
+    } catch (e) {
+      debugPrint('HTTP error: $e');
+    }
   }
 
   void _openMonitor() {
